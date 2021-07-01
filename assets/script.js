@@ -27,16 +27,19 @@ var problem = [
 },
 ];
 
-
 var startButtonEl = document.getElementById("start");
-// var answerChoices= document.getElementsByClassNames("choice");
+var answerChoices= document.getElementsByClassName("choice");
+var questionText= document.getElementsByClassName("quizQuestion");
 
 startButtonEl.addEventListener("click", function() { 
   console.log("Hello!");
   startButtonEl.style.display = "none";
+  alert("Once you pick a choice, you cant change it!");
+  if (startButtonEl.style.display="none") {  
+    for (let i = 0; i < problem.length; i++) {
+      console.log(problem);
+      questionText.innerHTML=" ";
+    }
+  }
 })
 
-// function nextQuestion(){
-
-// }
-// Next 
